@@ -15,9 +15,9 @@ if [[ $1 =~ ^[1-9]+$ ]]
 fi
 
 if [[ -z $element ]]
-then
-  echo -e "\nI could not find that element in the database."
-  exit
+  then
+    echo  "I could not find that element in the database."
+    exit
 fi
 
 echo $element | while IFS=" |" read an name symbol type mass mp bp 
