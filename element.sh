@@ -7,7 +7,7 @@ if [[ -z $1 ]]
   exit
 fi
 
-if [[ $1 =~ ^[1-9]+$ ]]
+if [[ $1 =~ ^[1-10]+$ ]]
       then
         element=$($PSQL "SELECT atomic_number, name, symbol, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements JOIN properties using(atomic_number) JOIN types using(type_id) where atomic_number = '$1'")
   else
